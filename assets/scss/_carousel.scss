@@ -1,0 +1,101 @@
+.our-brand-wrapper {
+    background-color: #f7f7ff;
+}
+
+.brand-carousel-wrapper {
+
+    &.dot-bg {
+        background-image: radial-gradient(#E6E6E6 1px, transparent 0);
+        background-size: 15px 15px;
+        background-position: -17px ​-22px;
+    }
+        
+    position: relative;
+}
+
+.brand-carousel-wrapper-2 {
+    background-color: $theme-color;
+
+    img {
+        filter: brightness(2);
+    }
+}
+
+.project-showcase-carousel {
+    padding: 0px 15px;
+
+    .single-recent-project { 
+        height: 700px;
+        width: 100%;
+        position: relative;
+        padding: 40px;
+        border-radius: 10px;
+        display: flex;
+        align-items: flex-end;
+
+        @media (max-width: 1400px) {
+            height: 500px;
+        }
+
+        @media (max-width: 767px) {
+            height: 420px;
+        }
+
+        @media (max-width: 500px) {
+            height: 380px;
+        }
+
+        &:hover {
+            .project-details { 
+                top: 0;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        .project-details { 
+            position: relative;
+            background-color: #fff;
+            display: inline-block;
+            padding: 15px 30px;
+            padding-right: 140px;
+            border-radius: 10px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all .4s ease-in-out;
+            top: 25px;
+            z-index: 2;
+
+            @media (max-width: 767px) {
+                padding-right: 80px;
+            }
+
+            .project-cat { 
+    
+                span { 
+                    color: $theme-color-4;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                }
+            }
+    
+            h4 {
+                margin-bottom: 5px;
+                color: #161616;
+
+                &:hover {
+                    a {
+                        color: $theme-color-4;
+                    }
+                }
+            }
+    
+            span { 
+                text-transform: uppercase;
+                font-size: 12px;
+                line-height: 1;
+            }
+        }
+    }
+
+}
